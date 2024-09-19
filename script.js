@@ -1,5 +1,6 @@
 const races = document.querySelector(".races");
 
+
 function getScrollAmount() {
 	let racesWidth = races.scrollWidth;
 	return -(racesWidth - window.innerWidth);
@@ -19,7 +20,6 @@ ScrollTrigger.create({
 	pin:true,
 	animation:tween,
 	scrub:1,
-	invalidateOnRefresh:true,
-	markers:true
+	invalidateOnRefresh:true
 });
 
