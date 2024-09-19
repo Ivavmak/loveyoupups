@@ -5,6 +5,7 @@ body {
 	margin:0;
 	background:#15151e;
 	overflow-x:hidden;
+	width: max-content;
 }
 
 
