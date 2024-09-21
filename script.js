@@ -1,6 +1,9 @@
 gsap.registerPlugin(ScrollTrigger);
 
 const contents = gsap.utils.toArray('#horizontal .content');
+ScrollTrigger.normalizeScroll(true); // enable
+
+let normalizer = ScrollTrigger.normalizeScroll();
 
 gsap.to(contents, {
 	xPercent: -100 * (contents.length - 1),
