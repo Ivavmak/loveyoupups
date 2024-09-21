@@ -1,51 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@646&display=swap');
-
-
-body {
-	margin:0;
-	background:#15151e;
-	overflow-x:hidden;
+*{
+	box-sizing: border-box;
 }
 
-
-
-.races {
-	width:fit-content;
-	display:flex;
-	flex-wrap:nowrap;
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "Inter", sans-serif;
 }
 
-.races h2 {
-	font-family: 'Montserrat', cursive;
-	font-size:30vw;
-	flex-shrink:0;
-	padding-right:0.3em;
-	padding-left:0.3em;
-	color:#e10600;
-	
-	margin:0;	
+header{
+	height: 50vh;
+}
+header h1{
+	font-size: 60px;
+	text-align: center;
+	font-weight: lighter;
+	letter-spacing: 4px;
+	margin: 0;
+	padding-block: 30px;
 }
 
-.races h2:last-of-type {
-	background:#e1e1ff;
+#horizontal .content {
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	flex-shrink: 0;
+	place-items: center;
 }
 
-.lightBG {
-	background:#313143;
+#horizontal {
+	display: flex;
 }
 
-.space-20vh {
-	height:20vh;
+#horizontal .content:nth-child(1) {
+	background-color: pink
+}
+#horizontal .content:nth-child(2) {
+	background-color: red
 }
 
-.space-30vh {
-	height:30vh;
+#horizontal .content:nth-child(3) {
+	background-color: blue
 }
 
-.space-50vh {
-	height:50vh;
+#horizontal .content:nth-child(4) {
+	background-color: purple
 }
 
-.space-100vh {
-	height:100vh;
+#horizontal .content:nth-child(5) {
+	background-color: cyan
 }
+
