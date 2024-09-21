@@ -1,25 +1,12 @@
-const races = document.querySelector(".races");
+gsap.registerPlugin(ScrollTrigger);
 
+const contents = gsap.utils.toArray('#horizontal .content');
 
-function getScrollAmount() {
-	let racesWidth = races.scrollWidth;
-	return -(racesWidth - window.innerWidth);
-}
-
-const tween = gsap.to(races, {
-	x: getScrollAmount,
-	duration: 3,
-	ease: "none",
+gsap.to(contents, {
+	xPercent: -100 * (contents.length - 1),
+	scrollTrigger: {
+		trigger: '#horizontal',
+		pin: true,
+		scrub: 1,
+	},
 });
-
-
-ScrollTrigger.create({
-	trigger:".racesWrapper",
-	start:"top 20%",
-	end: () => `+=${getScrollAmount() * -1}`,
-	pin:true,
-	animation:tween,
-	scrub:1,
-	invalidateOnRefresh:true
-});
-
